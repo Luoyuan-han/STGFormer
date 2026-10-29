@@ -121,9 +121,6 @@ BERT run; pass them explicitly with `--pretrain_train_csv` and
 
 The complete directory remains ignored and is not published to GitHub.
 
-## Publishing full data
+## Data
 
-Use an external release (Zenodo, Hugging Face, institutional object storage,
-or Git LFS) for the full trees. Add a versioned manifest under
-`data/manifests/` containing the download URL, source version, preprocessing
-parameters, number of rows per split, and SHA256 checksums before publishing.
+https://huggingface.co/datasets/Luoyuan-Han/STGFormer
