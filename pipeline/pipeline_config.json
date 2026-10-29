@@ -1,0 +1,22 @@
+{
+  "task": "bace",
+  "smoke_task": "bace_smoke",
+  "scaffold_root": "fintune_datas/moleculenet_random_scaffold",
+  "seed": 42,
+  "seq_len": 32,
+  "batch_size": 32,
+  "epochs": 1,
+  "lr": 3e-05,
+  "pooling": "cls",
+  "train_variant": "STG+PE",
+  "pretrained_checkpoint": "checkpoints/pretraining/Bert_STG+PE_1000k.pt",
+  "enforced": false,
+  "random_smiles": false,
+  "smoke_sizes": {
+    "train": 4,
+    "valid": 2,
+    "test": 2
+  },
+  "full_eval_splits": [],
+  "runs_dir": "runs"
+}

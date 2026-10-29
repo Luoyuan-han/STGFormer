@@ -1,0 +1,16 @@
+# Core runtime for the STGFormer pipeline (verified with a CUDA-enabled env).
+# Install torch with the CUDA wheel that matches your driver, e.g.
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+torch>=2.0
+numpy>=1.24,<3
+pandas>=2.0
+scikit-learn>=1.3
+scipy>=1.10
+matplotlib>=3.7
+seaborn>=0.13
+rdkit>=2023.9
+tqdm>=4.65
+ijson>=3.2
+networkx>=3.0
+plotly>=5.18
+openpyxl>=3.1
