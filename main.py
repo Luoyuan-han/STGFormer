@@ -6,7 +6,7 @@ import numpy as np
 from Bert_trainer import STGFormerTrainer
 import json
 import torch
-from data_io import find_task_dir, has_aggregate_csv, has_split_file, read_split
+from data_io import find_task_dir, has_aggregate_csv, has_split_file, read_split as read_data_split
 import os
 from rdkit import RDLogger, Chem
 from Dataset import (
@@ -113,18 +113,18 @@ if __name__ == '__main__':
     def load_scaffold_split(root, task, seed, enforced=False, train_enforced=False):
         split_dir = find_scaffold_task_dir(root, task, seed)
 
-        def read_split(name):
+        def load_split(name):
 
-            rows, fp = read_split(
+            rows, fp = read_data_split(
                 split_dir, name, enforced=enforced,
                 random_smiles=(train_enforced and name == 'train'),
             )
             print(f'Loaded {len(rows)} {name} rows from {fp}')
             return normalize_scaffold_rows(rows)
 
-        train_data = read_split('train')
-        val_data = read_split('valid')
-        test_data = read_split('test')
+        train_data = load_split('train')
+        val_data = load_split('valid')
+        test_data = load_split('test')
         print(
             f'Loaded scaffold/{task}/{split_dir.name}: '
             f'train={len(train_data)}, valid={len(val_data)}, test={len(test_data)}, '
