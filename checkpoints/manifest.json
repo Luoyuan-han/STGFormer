@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "total_files": 12,
+  "total_bytes": 4285541261,
+  "groups": {
+    "bert_pretraining": {
+      "files": 10,
+      "bytes": 3603041246
+    },
+    "gpt_generation": {
+      "files": 2,
+      "bytes": 682500015
+    }
+  },
+  "files": [
+    {
+      "path": "pretraining/Bert_Base_1000k.pt",
+      "size_bytes": 360146707,
+      "sha256": "8ab699e1e5dd70b30e85dcfe551e8428f1466dbd663f9cf4ce807f3aa40cf64d"
+    },
+    {
+      "path": "pretraining/Bert_Base_all.pt",
+      "size_bytes": 360146707,
+      "sha256": "8ab699e1e5dd70b30e85dcfe551e8428f1466dbd663f9cf4ce807f3aa40cf64d"
+    },
+    {
+      "path": "pretraining/Bert_PE_1000k.pt",
+      "size_bytes": 360540251,
+      "sha256": "e93dbf52a4a71489987a95c2b6481243f3750800270f48ab395c68898c1a5f22"
+    },
+    {
+      "path": "pretraining/Bert_PE_all.pt",
+      "size_bytes": 360540251,
+      "sha256": "7db71dadaac405d94de6e07990fe94265cf2b37101c4f4e83f6c9541ef652607"
+    },
+    {
+      "path": "pretraining/Bert_RoPE_1000k.pt",
+      "size_bytes": 360146707,
+      "sha256": "aa6f243fdc14696d24b2f8c467bca59a5d7f3d2d596663196d32d1d083ddd4ca"
+    },
+    {
+      "path": "pretraining/Bert_RoPE_all.pt",
+      "size_bytes": 360146707,
+      "sha256": "0f97d3555ff4a0c3c16cfc785576a184525c23a0478f479f2bdffb669ab163c7"
+    },
+    {
+      "path": "pretraining/Bert_STG+PE_1000k.pt",
+      "size_bytes": 360540251,
+      "sha256": "e93dbf52a4a71489987a95c2b6481243f3750800270f48ab395c68898c1a5f22"
+    },
+    {
+      "path": "pretraining/Bert_STG+PE_all.pt",
+      "size_bytes": 360540251,
+      "sha256": "515bf70a9e8d3be701643ac785cd56eaec6762eac101a49ebb84cdd09e31a495"
+    },
+    {
+      "path": "pretraining/Bert_STG_1000k.pt",
+      "size_bytes": 360146707,
+      "sha256": "00e680ebd8e8ff0e663028a379ad8c53aca6fe338084a80a602db4679cbdcd46"
+    },
+    {
+      "path": "pretraining/Bert_STG_all.pt",
+      "size_bytes": 360146707,
+      "sha256": "ae891c0cd2efda713a9b1b86d21acded5ca053b63c2101fa9e82b9ca40c84265"
+    },
+    {
+      "path": "pretraining/GPT_STG+PE_all.pt",
+      "size_bytes": 341446781,
+      "sha256": "675872f71fe4a5404b7a31c3c7a66f0d92d0c202b725a73bd43d7cadf7dab40b"
+    },
+    {
+      "path": "pretraining/GPT_STG_all.pt",
+      "size_bytes": 341053234,
+      "sha256": "b700b8bfed2ad30b1fbf45e40389731129a5b88b312c782daa9502d8644241a7"
+    }
+  ]
+}
