@@ -249,6 +249,6 @@ See [`analysis/README.md`](analysis/README.md) for the output files and grouping
 If you use this code, please cite the accompanying manuscript. Full citation
 details will be added once the paper is published.
 
-## Licence
+## License
 
-Not yet specified by the authors.
+This project's source code is licensed under the [MIT License](LICENSE).
