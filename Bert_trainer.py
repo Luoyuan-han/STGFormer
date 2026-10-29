@@ -826,6 +826,12 @@ class STGFormerTrainer:
                     if test_Dataset is None:
                         if self.config.reg:
                             self.last_eval_details = best_reg_details
+                        else:
+                            self.last_eval_details = {
+                                "split": "valid",
+                                "AUC": float(max_roc),
+                                "stop_reason": "early_stopping",
+                            }
                         return RMSE if self.config.reg else max_roc
 
                     state_dict = torch.load(
@@ -895,6 +901,11 @@ class STGFormerTrainer:
                         pred = y_pred[1:].reshape(-1)
                         mask = np.isfinite(true) & np.isfinite(pred)
                         rocs = roc_auc_score(true[mask], pred[mask])
+                        self.last_eval_details = {
+                            "split": "test",
+                            "AUC": float(rocs),
+                            "stop_reason": "early_stopping",
+                        }
                         return rocs
 
                     else:
@@ -915,6 +926,11 @@ class STGFormerTrainer:
                         else:
                             rocs = sum(rocs) / len(rocs) if len(rocs) > 0 else float('nan')
 
+                        self.last_eval_details = {
+                            "split": "test",
+                            "AUC": float(rocs),
+                            "stop_reason": "early_stopping",
+                        }
                         return rocs
 
             else:
@@ -1011,6 +1027,11 @@ class STGFormerTrainer:
             self.last_eval_details = best_reg_details
             return RMSE
         else:
+            self.last_eval_details = {
+                "split": "valid",
+                "AUC": float(max_roc),
+                "stop_reason": "epoch_limit",
+            }
             return max_roc
 
     def sample_(self,sample_batch_size):
