@@ -48,6 +48,7 @@ def sm2graph(tokens):
                 graph[index].append(index - 1)
             elif branch_parents:
                 parent = branch_parents.popleft()
+                last_parent = parent
                 if parent is not None and parent >= 0:
                     graph[parent].append(index)
                     graph[index].append(parent)
