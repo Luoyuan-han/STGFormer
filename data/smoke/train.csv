@@ -1,0 +1,5 @@
+smiles,tags,split
+C,[0.0],
+CCO,[1.0],
+c1ccccc1,[0.0],
+CC(=O)O,[1.0],

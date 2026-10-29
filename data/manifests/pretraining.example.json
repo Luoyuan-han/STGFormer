@@ -1,0 +1,38 @@
+{
+  "name": "stgformer_pretraining",
+  "protocol": "bert_mlm_and_gpt_autoregressive_pretraining",
+  "source": {
+    "local_mount": "train_data/train_1000k.csv",
+    "url": "",
+    "version": "replace-with-release-or-commit"
+  },
+  "additional_sources": {
+    "bert_valid": "train_data/valid_1000k.csv",
+    "gpt_train": "train_data/gpt_train/train_1000k.csv",
+    "gpt_valid": "train_data/gpt_train/valid_1000k.csv"
+  },
+  "format": "CSV with one smiles column",
+  "rows": {
+    "bert_train": 900000,
+    "bert_valid": 100000,
+    "gpt_train": 900000,
+    "gpt_valid": 100000
+  },
+  "sha256": "",
+  "split": {
+    "train_fraction": 0.9,
+    "valid_fraction": 0.1,
+    "seeds": [42, 52, 62, 72, 82, 92, 102, 112, 122, 132],
+    "cache_dir": "train_data/cache"
+  },
+  "preprocessing": {
+    "sequence_length": 128,
+    "batch_size": 512,
+    "tokenizer": "Tokenizer.py:BertTokenizer",
+    "mlm_probability": 0.15,
+    "scheduler": "cosine",
+    "learning_rate": 0.0003,
+    "early_stopping_patience": 5
+  },
+  "notes": "Keep the corpus outside Git; fill URL/version/checksum before publishing."
+}

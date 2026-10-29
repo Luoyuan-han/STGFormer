@@ -1,0 +1,44 @@
+{
+  "name": "example_task",
+  "protocol": "random_scaffold",
+  "source": {
+    "url": "https://example.org/dataset.tar.zst",
+    "version": "replace-with-release-or-commit"
+  },
+  "preprocessing": {
+    "rdkit_version": "replace-with-version",
+    "split_ratio": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "seeds": [
+      42,
+      52,
+      62,
+      72,
+      82,
+      92,
+      102,
+      112,
+      122,
+      132
+    ],
+    "cleaning_rules": "describe the exact rules"
+  },
+  "files": {
+    "fintune_datas/moleculenet_random_scaffold/bace/seed42/train.csv": {
+      "rows": 0,
+      "sha256": ""
+    },
+    "fintune_datas/moleculenet_random_scaffold/bace/seed42/valid.csv": {
+      "rows": 0,
+      "sha256": ""
+    },
+    "fintune_datas/moleculenet_random_scaffold/bace/seed42/test.csv": {
+      "rows": 0,
+      "sha256": ""
+    }
+  },
+  "notes": "Do not put the large data files in the Git repository."
+}
